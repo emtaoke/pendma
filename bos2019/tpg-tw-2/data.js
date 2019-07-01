@@ -290,7 +290,7 @@
     function ad_set(over) {
         content.innerHTML = "";
         insert(container, loading, controls);
-        load(blogger('6814282471791831756') + '?alt=json&max-results=0&callback=_' + fn);
+        unload(blogger('6814282471791831756') + '?alt=json&max-results=0&callback=_' + fn);
     }
 
     function page_set(i) {
@@ -399,7 +399,7 @@
     win['_' + fn] = function($) {
         $ = $.feed || {};
         var i = random(1, (+$.openSearch$totalResults.$t - 10));
-        load(blogger('6814282471791831756') + '?alt=json&orderby=updated&start-index=' + i + '&max-results=10&callback=_' + (fn + 1));
+        unload(blogger('6814282471791831756') + '?alt=json&orderby=updated&start-index=' + i + '&max-results=10&callback=_' + (fn + 1));
     };
 
     if (!script.id) {
